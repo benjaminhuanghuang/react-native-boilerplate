@@ -10,7 +10,9 @@
 ## Toolkit
   brew install watchman  # react native use watchman to monitor code changing and rebuild
 
-  
+## Create .babelrc
+  react
+
 ## Some shortcuts
   CMD + R            # Reload application
   CMD + D            # developer menu
