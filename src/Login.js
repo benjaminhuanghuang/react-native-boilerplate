@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 import { MKTextField, MKColor, MKButton} from 'react-native-material-kit';
+//
+import Loader  from './Loader';
 
 const LoginButton = MKButton.coloredButton()
             .withText('Login')
