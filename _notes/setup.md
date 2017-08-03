@@ -4,6 +4,7 @@
 
 ## Run 
   $ react-native run-ios       # run app on ios
+  or open ios/<proj>.xcodeproj
 
   $ react-native run-android   # run app on android
 
