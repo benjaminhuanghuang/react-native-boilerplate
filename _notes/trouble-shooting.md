@@ -3,3 +3,4 @@ http://data-creative.info/process-documentation/2016/07/22/react-native-android-
 
 
 ## Unhandled JS Exception: babelHelpers.typeof is not a function
+  Restart computer
