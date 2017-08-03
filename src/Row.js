@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Platform, ListView, Keyboard } from 'react-native';
+import { StyleSheet, Text, View} from 'react-native';
 
 //
-import Header from './Header';
-import Footer from './Footer';
-import Row from './Row';
 
-export default class App extends Component {
+export default class Row extends Component {
   constructor(props){
     super(props);
     
@@ -22,17 +19,7 @@ export default class App extends Component {
     };
     this.handleAddItem = this.handleAddItem.bind(this);
     this.handleToggleAllComplete = this.handleToggleAllComplete.bind(this);
-    this.setSource = this.setSource.bind(this);
   }
-
-  setSource(items, itemsDataSource, otherState)
-  {
-    this.setState({
-      items,
-      dataSource: this.state.dataSource.cloneWithRows(itemsDataSource)
-    });
-  }
-
 
   handleToggleAllComplete ()
   {
@@ -73,23 +60,6 @@ export default class App extends Component {
                 onChange ={(value)=>this.setState({value})}
                 onToggleAllComplete = {this.handleToggleAllComplete}/>
         <View style = {styles.content}>
-          <ListView
-            style={styles.list}
-            enableEmptySections
-            dataSource = {this.state.dataSource}
-            onScroll = {()=> Keyboard.dismiss()}
-            renderRow = { ({key, ...value}) =>{
-              return (
-                <Row
-                  key = {key}
-                  {...value}
-                />
-              );
-            }}
-            renderSeparator = {(sectionId, rowId)=>{
-              return <View key ={rowId} style={styles.separator}/>
-            }}
-          />
         </View>
         <Footer/>
       </View>
@@ -109,12 +79,5 @@ const styles = StyleSheet.create({
   },
   content:{
     flex: 1
-  },
-  list:{
-    backgroundColor:"#FFF"
-  },
-  separator:{
-    borderWidth: 1,
-    borderColor: "#F5F5F5"
   }
 });
