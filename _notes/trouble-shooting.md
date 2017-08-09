@@ -11,3 +11,7 @@ http://data-creative.info/process-documentation/2016/07/22/react-native-android-
   Restart computer
 
 ## Keyboard does not work
+
+
+## Opening non HTTPS sites in WebView in React Native
+http://blog.bigbinary.com/2016/07/27/open-non-https-sites-in-webview-in-react-native.html
